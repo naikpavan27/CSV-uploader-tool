@@ -15,6 +15,8 @@ Display mapped data in tables
 1. Install nodeJs from (https://nodejs.org/en)
 2. npm install
 
+## Check out the master branch
+
 ## Development server | Usage
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
