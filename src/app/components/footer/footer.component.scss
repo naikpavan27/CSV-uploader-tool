@@ -1,0 +1,34 @@
+/* footer.component.scss */
+
+.footer {
+  background-color: #222; /* Dark gray */
+  color: #fff; /* White */
+  padding: 20px 0;
+  text-align: center;
+
+  .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+    img {
+      width: 45px;
+      margin-right: 10px;
+      border: 2px solid #fff;
+      border-radius: 8px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+}

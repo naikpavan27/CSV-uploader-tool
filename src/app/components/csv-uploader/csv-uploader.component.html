@@ -1,0 +1,74 @@
+<div class="csv-uploader-grid">
+  <!-- Upload CSV file -->
+  <input type="file" (change)="onFileSelected($event)" accept=".csv" />
+  <!-- Custom dropdown -->
+  <div class="dropdown-grid">
+    <div class="selected-options" (click)="toggleDropdown()">
+      <span>Select Database fields &#9660;</span>
+    </div>
+    <div class="options" *ngIf="showDropdown">
+      <div
+        class="option"
+        *ngFor="let dataBaseField of dataBaseFields"
+        (click)="databaseFieldOption(dataBaseField)"
+      >
+        <input type="checkbox" [checked]="isSelected(dataBaseField)" />
+        {{ dataBaseField }}
+      </div>
+    </div>
+  </div>
+  <!-- Map Button -->
+  <div class="map-button-grid">
+    <button
+      class="map-button"
+      [disabled]="isButtonDisabled()"
+      (click)="fetchSuggestions()"
+    >
+      Map
+    </button>
+  </div>
+</div>
+<!-- Loader container -->
+<div class="loader-container" *ngIf="isLoading">
+  <div class="spinner"></div>
+</div>
+<!-- Container for tables -->
+<div
+  class="tables-container"
+  *ngIf="csvData.length > 0 && suggestions.length > 0"
+>
+  <!-- Table for displaying CSV data -->
+  <div class="csv-table-container">
+    <h3>CSV Data:</h3>
+    <table class="csv-table">
+      <thead>
+        <tr>
+          <th *ngFor="let header of csvData[0] | keyvalue">{{ header.key }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of csvData">
+          <td *ngFor="let cell of row | keyvalue">{{ cell.value }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Table for displaying mapped suggestion data -->
+  <div class="suggestion-table-container">
+    <h3>Mapped Suggestions:</h3>
+    <table class="suggestion-table">
+      <thead>
+        <tr>
+          <th *ngFor="let header of suggestions[0] | keyvalue">
+            {{ header.key }}
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let row of suggestions">
+          <td *ngFor="let cell of row | keyvalue">{{ cell.value }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
