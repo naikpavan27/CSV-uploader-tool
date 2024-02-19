@@ -31,6 +31,6 @@ CSS/SCSS
 
 ## Openai
 
-https://zimegpt35-east2.openai.azure.com/openai/ and API KEY for automation
+https://realapilink-east2.openai.azure.com/openai/ and API KEY for automation
 
 

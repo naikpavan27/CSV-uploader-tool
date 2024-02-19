@@ -6,8 +6,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class CsvUploaderService {
   apiUrl =
-    'https://zimegpt35-east2.openai.azure.com/openai/deployments/GPT3-5-Turbo/chat/completions?api-version=2023-03-15-preview'; // Replace with the actual API endpoint
-  apiKey = '4d9baa6b7a4e42d3b6e89f98bfc84f16'; // Replace with your API key
+    'https://addreallink-east2.openai.azure.com/openai/deployments/GPT3-5-Turbo/chat/completions?api-version=2023-03-15-preview'; // Replace with the actual API endpoint
+  apiKey = 'abacdsjdsjdjdsdhjj'; // Replace with your API key
 
   constructor(private http: HttpClient) {}
 
