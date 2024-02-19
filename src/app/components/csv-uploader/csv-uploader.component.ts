@@ -23,7 +23,11 @@ export class CsvUploaderComponent {
   }
 
   onFileSelected(event: any) {
+    this.csvData = [];
+    this.suggestions = [];
+    this.selectedOptions = [];
     const file: File = event.target.files[0];
+
     if (file) {
       this.parseCSV(file);
     }
@@ -35,7 +39,6 @@ export class CsvUploaderComponent {
     reader.onload = () => {
       const csvData: string = reader.result as string;
       this.csvData = this.csvJSON(csvData);
-      // this.fetchSuggestions();
     };
     reader.readAsText(file);
   }
