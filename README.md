@@ -11,12 +11,12 @@ Map CSV columns to database fields
 Display mapped data in tables
 
 ## Installation 
-
+Repository: https://github.com/naikpavan27/CSV-uploader-tool.git
 1. Install nodeJs from (https://nodejs.org/en)
 2. npm install
 
 ## Check out the master branch
-
+Repository: https://github.com/naikpavan27/CSV-uploader-tool.git
 
 ## Development server | Usage
 
